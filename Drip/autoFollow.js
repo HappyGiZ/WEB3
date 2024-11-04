@@ -1,5 +1,6 @@
 function clickButtonsSequentially(index = 0) {
     const followButtons = document.querySelectorAll("button[title='Follow']");
+    
     const followButtonsArray = Array.from(followButtons);
 
     if (index < followButtonsArray.length) {
