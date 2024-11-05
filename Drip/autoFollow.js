@@ -1,16 +1,18 @@
-function clickButtonsSequentially(index = 0) {
+function clickButtonsSequentially(index = 1, total = null) {
     const followButtons = document.querySelectorAll("button[title='Follow']");
-    
-    const followButtonsArray = Array.from(followButtons);
 
-    if (index < followButtonsArray.length) {
-        const button = followButtonsArray[index];
+    if (total === null) {
+        total = followButtons.length;
+    }
+
+    if (followButtons.length > 0) {
+        const button = followButtons[0];
         button.click();
-        console.log(`Follow ${index + 1} / ${followButtonsArray.length}`);
+        console.log(`Follow ${index} / ${total}`);
 
         setTimeout(() => {
-            clickButtonsSequentially(index + 1);
-        }, 2000);
+            clickButtonsSequentially(index + 1, total);
+        }, 1000);
     } else {
         console.log('Зафолловили всех полностью.');
         scrollToTop();
