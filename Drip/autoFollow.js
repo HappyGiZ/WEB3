@@ -10,7 +10,7 @@ function clickButtonsSequentially(index = 0) {
 
         setTimeout(() => {
             clickButtonsSequentially(index + 1);
-        }, 1000);
+        }, 2000);
     } else {
         console.log('Зафолловили всех полностью.');
         scrollToTop();
