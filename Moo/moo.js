@@ -34,7 +34,7 @@
 
     console.log(`Клик ${i + 1} / ${clicksCount}`);
 
-    await new Promise(resolve => setTimeout(resolve, 100 + Math.random() * 300));
+    await new Promise(resolve => setTimeout(resolve, 200 + Math.random() * 400));
 
     currentX = Math.min(safeXEnd, Math.max(safeXStart, currentX + (Math.random() * 20 - 10)));
     currentY = Math.min(safeYEnd, Math.max(safeYStart, currentY + (Math.random() * 20 - 10)));
